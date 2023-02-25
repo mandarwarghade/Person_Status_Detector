@@ -20,14 +20,13 @@ nltk.download('omw-1.4')
 #Loading up the Regression model we created
 
 
-with open('model_pickle','rb') as f:
+with open('vectorizer_pickle_log','rb') as f:
   model=pickle.load(f)
 
-with open('count_vecotor_pickle','rb') as f:
-  clf=pickle.load(f)
+with open('vectorizer_pickle_log','rb') as f:
+  vectorizer=pickle.load(f)
 
-with open('tf_transformer_pickle','rb') as f:
-  tf_transformer=pickle.load(f)
+
 
 
 #Caching the model for faster loading
@@ -115,9 +114,7 @@ def clean(tp):
 # Define the prediction function
 def predict(test):
     
-    X_test_cv = clf.transform(test)
-    
-    X_test_tf = tf_transformer.transform(X_test_cv)
+    X_test_tf = vectorizer.transform(test)  
 
     num=model.predict(X_test_tf)[0]
 
