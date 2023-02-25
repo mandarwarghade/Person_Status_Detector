@@ -4,3 +4,4 @@ pandas
 streamlit
 xgboost
 sklearn
+tensorflow
