@@ -20,7 +20,7 @@ nltk.download('omw-1.4')
 #Loading up the Regression model we created
 
 
-with open('vectorizer_pickle_log','rb') as f:
+with open('model_pickle_log','rb') as f:
   model=pickle.load(f)
 
 with open('vectorizer_pickle_log','rb') as f:
