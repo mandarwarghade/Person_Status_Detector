@@ -136,10 +136,9 @@ st.header('Enter the details:')
 full_name = st.text_input('Full_name:',)
 title=st.selectbox('Title:', title_name)
 bio = st.text_area('Bio:')
-Post = st.text_area('Post:')
 hashtags = st.text_area('Hashtags:')
 
-new_data=" ".join([title, bio,Post,hashtags])
+new_data=" ".join([title, bio,hashtags])
 
 df=pd.DataFrame([new_data])
 df.columns=['merged']
