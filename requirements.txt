@@ -3,5 +3,5 @@ nltk
 pandas
 streamlit
 xgboost
-sklearn
+scikit-learn
 tensorflow
